@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat Assistant</title>
+    <title>L'Oreal Beauty Advisor</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -19,42 +19,77 @@
     <div class="page-wrapper">
       <!------- Header / Branding ------->
       <header class="site-header">
-        <h1 class="site-title">Smart Product Advisor</h1>
+        <img src="images/loreal-logo.png" alt="L'Oreal Logo" class="logo" />
+
+        <h1 class="site-title">L'Oreal Beauty Advisor</h1>
+
+        <p class="subtitle">
+          Personalized skincare, makeup, haircare, fragrance, and beauty routine
+          recommendations.
+        </p>
       </header>
 
       <!------- Chat Area ------->
       <main>
-        <section class="chatbox">
-          <div id="chatWindow" class="chat-window">
-            <!-- messages will be appended here via JS -->
-          </div>
+        <section class="current-question">
+          <h2>Your Latest Question</h2>
 
+          <p id="latestQuestion">Ask a beauty question to begin.</p>
+        </section>
+
+        <section class="chatbox">
+          <!-- Messages appear here -->
+          <div id="chatWindow" class="chat-window"></div>
+
+          <!-- Chat Form -->
           <form id="chatForm" class="chat-form">
-            <label for="userInput" class="visually-hidden">Message</label>
+            <label for="userInput" class="visually-hidden">
+              Enter Message
+            </label>
+
             <input
+              type="text"
               id="userInput"
               name="userInput"
-              type="text"
-              placeholder="Ask me about products or routines…"
+              placeholder="Ask about skincare, makeup, haircare, fragrances..."
               autocomplete="off"
               required
             />
-            <button type="submit" id="sendBtn">
-              <span class="material-icons">send</span>
-              <span class="visually-hidden">Send</span>
+
+            <button type="submit">
+              <span class="material-icons"> send </span>
+
+              <span class="visually-hidden"> Send </span>
             </button>
           </form>
         </section>
       </main>
 
-      <!------- Footer Links ------->
+      <!-- ===============================
+         Footer
+    ================================ -->
       <footer class="site-footer">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
+        <p>
+          This chatbot was created for educational purposes and is not
+          affiliated with or endorsed by L'Oréal.
+        </p>
+
         <nav>
-          <!-- These URLs are placeholders -->
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Contact</a>
+          <a href="https://www.loreal.com/en/" target="_blank"> L'Oréal </a>
+
+          <a
+            href="https://www.loreal.com/en/group/privacy-policy/"
+            target="_blank"
+          >
+            Privacy
+          </a>
+
+          <a
+            href="https://www.loreal.com/en/group/terms-of-use/"
+            target="_blank"
+          >
+            Terms
+          </a>
         </nav>
       </footer>
     </div>
