@@ -1,36 +1,38 @@
-/* ==========================================
-   Reset default browser styles
-========================================== */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ==========================================
-   Page Styling
-========================================== */
+
 
 body {
   font-family: "Montserrat", Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #222;
+  color: #ffffff;
   display: flex;
   justify-content: center;
   padding: 30px;
+
+  background-color: #050505;
+
+  background-image: repeating-radial-gradient(circle at center,
+      transparent 0,
+      transparent 105px,
+      rgba(212, 166, 79, 0.35) 107px,
+      rgba(212, 166, 79, 0.35) 109px,
+      transparent 111px,
+      transparent 190px);
+
+  background-attachment: fixed;
 }
 
-/* Main container */
+
 
 .page-wrapper {
-  width: 90%;
-  max-width: 900px;
+  width: 95%;
+  max-width: 1100px;
 }
 
-/* ==========================================
-   Header
-========================================== */
 
 .site-header {
   text-align: center;
@@ -45,7 +47,12 @@ body {
 .site-title {
   font-size: 34px;
   margin-bottom: 12px;
-  color: #000;
+  color: #d4a64f;
+}
+
+.subtitle {
+  color: #eeeeee;
+  font-size: 18px;
 }
 
 .subtitle {
@@ -53,20 +60,22 @@ body {
   font-size: 18px;
 }
 
-/* ==========================================
-   Latest Question Section
-========================================== */
+
 
 .current-question {
-  background: white;
+  background: rgba(20, 20, 20, .95);
+  border: 1px solid rgba(212, 166, 79, .5);
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 20px;
-  border: 1px solid #ddd;
 }
 
 .current-question h2 {
-  margin-bottom: 10px;
+  color: #d4a64f;
+}
+
+#latestQuestion {
+  color: white;
 }
 
 #latestQuestion {
@@ -74,24 +83,18 @@ body {
   font-weight: 500;
 }
 
-/* ==========================================
-   Chat Window
-========================================== */
 
 .chat-window {
   height: 500px;
-  background: white;
-  border: 2px solid black;
-  border-radius: 12px;
+  background: rgba(10, 10, 10, .92);
+  border: 1px solid rgba(212, 166, 79, .45);
+  border-radius: 16px;
   padding: 20px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
 
-/* ==========================================
-   Chat Bubbles
-========================================== */
 
 .msg {
   max-width: 75%;
@@ -102,103 +105,74 @@ body {
   word-wrap: break-word;
 }
 
-/* User message */
+
 
 .msg.user {
-  background: black;
-  color: white;
+  background: linear-gradient(135deg, #deb65f, #b88630);
+  color: black;
   align-self: flex-end;
 }
 
-/* AI message */
-
 .msg.ai {
-  background: #eeeeee;
-  color: #222;
+  background: #1d1d1d;
+  color: white;
   align-self: flex-start;
+  border: 1px solid #333;
 }
 
-/* ==========================================
-   Chat Form
-========================================== */
 
 .chat-form {
   display: flex;
-  gap: 15px;
-  margin-top: 20px;
+  width: 100%;
+  gap: 12px;
+  margin-top: 14px;
 }
 
 .chat-form input {
   flex: 1;
-  padding: 14px;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  font-size: 18px;
-}
-
-.chat-form input:focus {
-  outline: none;
-  border-color: black;
+  min-width: 0;
+  height: 58px;
+  padding: 14px 18px;
+  border: 1px solid #444;
+  background: #111;
+  color: white;
+  border-radius: 12px;
+  font-size: 16px;
 }
 
 .chat-form button {
-  width: 60px;
-  height: 60px;
-  background: black;
-  color: white;
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  background: linear-gradient(135deg, #deb65f, #b88630);
+  color: black;
   border: none;
-  border-radius: 50%;
+  border-radius: 12px;
   cursor: pointer;
-  transition: .3s;
 }
 
-.chat-form button:hover {
-  background: #444;
-  transform: scale(1.05);
-}
 
-.chat-form button .material-icons {
-  font-size: 28px;
-}
-
-/* ==========================================
-   Footer
-========================================== */
 
 .site-footer {
   text-align: center;
   margin-top: 40px;
-  color: #666;
-  font-size: 14px;
-}
-
-.site-footer nav {
-  margin-top: 15px;
+  color: #cccccc;
 }
 
 .site-footer a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
+  color: #d4a64f;
 }
 
 .site-footer a:hover {
-  color: #777;
+  color: white;
 }
 
-/* ==========================================
-   Accessibility
-========================================== */
 
 .visually-hidden {
   position: absolute;
   left: -9999px;
 }
 
-/* ==========================================
-   Mobile Responsiveness
-========================================== */
 
 @media (max-width: 700px) {
 
